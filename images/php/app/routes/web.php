@@ -30,12 +30,12 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
     $router->post('clients/{client_id}/contrats', ['uses' => 'ClientController@createContrat']);
     $router->put('/clients/{client_id}/contrats/{contrat_id}', ['uses' => 'ClientController@updateContrat']);
     $router->delete('/clients/{client_id}/contrats/{contrat_id}', ['uses' => 'ClientController@deleteContrat']);
+    // Find all contracts
+    $router->get('/contrats', ['uses' => 'ClientController@showAllContrats']);
     // Find all contracts linked to one client
     $router->get('/clients/{client_id}/contrats', ['uses' => 'ClientController@showAllContratsFromClient']);
     // Find one contract
     $router->get('/contrats/{contrat_id}', ['uses' => 'ClientController@showOneContrat']);
-    // Find all contracts
-    $router->get('/contrats', ['uses' => 'ClientController@showAllContrats']);
     // Find one contract specific to one client
     $router->get('/clients/{client_id}/contrats/{contrat_id}', ['uses' => 'ClientController@showOneContratSpecificClient']);
 
