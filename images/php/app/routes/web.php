@@ -17,23 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix'=>'api/v1'], function() use($router){
-    // Find Authors
-    $router->get('/authors', ['uses' => 'AuthorController@showAllAuthors']);
-    $router->get('/authors/{author_id}', ['uses' => 'AuthorController@showOneAuthor']);
-    // Author CRUD
-    $router->post('/authors', ['uses' => 'AuthorController@createAuthor']);
-    $router->put('/authors/{author_id}', ['uses' => 'AuthorController@updateAuthor']);
-    $router->delete('/authors/{author_id}', ['uses' => 'AuthorController@deleteAuthor']);
-    $router->post('/authors/{author_id}/books', ['uses' => 'AuthorController@createBook']);
-    $router->get('/authors/{author_id}/books', ['uses' => 'AuthorController@showAllBooksFromAuthor']);
-    $router->get('/authors/{author_id}/books/{book_id}', ['uses' => 'AuthorController@showOneBook']);
-    $router->get('/books', ['uses' => 'AuthorController@showAllBooks']);
-    $router->get('/books/{book_id}', ['uses' => 'AuthorController@showOneBooks']);
-    $router->get('/authors/{author_id}/books/{book_id}', ['uses' => 'AuthorController@showOneBook']);
-    $router->put('/authors/{author_id}/books/{book_id}', ['uses' => 'AuthorController@updateBook']);
-    $router->delete('/authors/{author_id}/books/{book_id}', ['uses' => 'AuthorController@deleteBook']);
 
+$router->group(['prefix'=>'api/v1'], function() use($router){
     // Client CRUD
     $router->post('/clients', ['uses' => 'ClientController@createClient']);
     $router->put('/clients/{client_id}', ['uses' => 'ClientController@updateClient']);

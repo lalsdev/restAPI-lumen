@@ -29,14 +29,24 @@ Build the project
 sudo docker-compose up --build
 ```
 
-Enter the project
+You should be able to access the routes
 
-```bash
-cd lumen
-```
+### Get all clients
 
-Make migrations (you enter into the docker container and so you are able to make migrations)
+GET http://localhost:80/api/v1/clients
 
-```bash
-docker-compose exec php sh
-```
+### Get one specific client
+
+GET http://localhost:80/api/v1/clients/{client_id}
+
+### Get all contracts from one client
+
+GET http://localhost:80/api/v1/clients/{client_id}/contrats
+
+### Update one or more attribute linked to one contract
+
+PUT http://localhost:80/api/v1/contrats/{contrat_id}
+
+There are other routes for the whole CRUD both for the clients and the contracts you can find the routes in web.php
+
+Bye!
