@@ -1,6 +1,6 @@
 # Rest Api built with Lumen
 
-![tables](tables.pdf)
+![tables](tables.jpeg)
 
 You are able to
 
