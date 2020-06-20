@@ -23,13 +23,43 @@ Copy the project
 git clone https://github.com/lalsdev/restAPI-lumen
 ```
 
-Build the project
+Go in folder
 
 ```bash
-sudo docker-compose up --build
+cd restAPI-lumen
+```
+
+Build project
+
+```bash
+sudo docker-compose up --build -d
+```
+
+Enter the container
+
+```bash
+sudo docker-compose exec php sh
+```
+
+Exit current folder inside the container
+
+```bash
+cd ..
+```
+
+Download modules from composer
+
+```bash
+composer install
 ```
 
 You should be able to access the routes
+
+Stop container
+
+```bash
+sudo docker-compose down
+```
 
 ### Get all clients
 
@@ -47,6 +77,6 @@ GET http://localhost:80/api/v1/clients/{client_id}/contrats
 
 PUT http://localhost:80/api/v1/contrats/{contrat_id}
 
-There are other routes for the whole CRUD both for the clients and the contracts you can find the routes in web.php
+There are other routes for the whole CRUD both for the clients and the contracts you can find the routes in app/routes/web.php
 
 Bye!
