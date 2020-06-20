@@ -1,6 +1,6 @@
 # Rest Api built with Lumen
 
-![tables](./tables.pdf)
+![tables](tables.pdf)
 
 You are able to
 
@@ -9,13 +9,13 @@ You are able to
 - Get all contracts specific to one client
 - Update a contract
 
-# Environment Setup
+## Environment Setup
 
 I used a boiler plate to create the environment for the project. Docker + Lumen with Nginx and MySQL.
 
-# Routes
+## Routes
 
-# How to use
+## How to use
 
 Copy the project
 
