@@ -61,6 +61,18 @@ Stop container
 sudo docker-compose down
 ```
 
+### Create client
+
+POST http://localhost:80/api/v1/clients
+
+### Update one or more attributes from client
+
+PUT http://localhost:80/api/v1/clients
+
+### Delete
+
+DELETE http://localhost:80/api/v1/clients/{client_id}
+
 ### Get all clients
 
 GET http://localhost:80/api/v1/clients
@@ -69,14 +81,30 @@ GET http://localhost:80/api/v1/clients
 
 GET http://localhost:80/api/v1/clients/{client_id}
 
+### Create contract
+
+POST http://localhost:80/api/v1/clients/{client_id}/contrats
+
+### Update one or more attributes from contract
+
+PUT http://localhost:80/api/v1/clients{client_id}/contrats/{contrat_id}
+
+### Delete
+
+DELETE http://localhost:80/api/v1/clients/{client_id}/contrats/{contrat_id}
+
+### Get all contracts
+
+GET http://localhost:80/api/v1/contrats
+
+### Get one contract
+
+GET http://localhost:80/api/v1/contrats/{contrat_id}
+
 ### Get all contracts from one client
 
 GET http://localhost:80/api/v1/clients/{client_id}/contrats
 
-### Update one or more attribute linked to one contract
+### Get one contract from one client
 
-PUT http://localhost:80/api/v1/contrats/{contrat_id}
-
-There are other routes for the whole CRUD both for the clients and the contracts you can find the routes in app/routes/web.php
-
-Bye!
+GET http://localhost:80/api/v1/clients/{client_id}/contrats/{contrat_id}
