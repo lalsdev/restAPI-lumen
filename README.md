@@ -13,8 +13,6 @@ You are able to
 
 I used a boiler plate to create the environment for the project. Docker + Lumen with Nginx and MySQL.
 
-## Routes
-
 ## How to use
 
 Copy the project
